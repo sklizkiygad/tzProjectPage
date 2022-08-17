@@ -25,7 +25,9 @@ export const contactReducer = (state = initialState, action:any) => {
                 return {
                     ...state,
                     userContacts: [...state.userContacts.filter(user=>{
-                        console.log('dsfsdfsdfsd', user.id, action);
+                        return user.id !== action.id
+                    })],
+                    filteredContact: [...state.userContacts.filter(user=>{
                         return user.id !== action.id
                     })],
                 }
