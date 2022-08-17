@@ -38,6 +38,9 @@ export const  AddContactButton:FC = () => {
         }
         else{
             dispatch(addUserContactById({id:idForNewContact(), name:name, email:'example@mail.ru', phone:phone}))}
+
+        setName('');
+        setPhone('');
         }
 
     return (
